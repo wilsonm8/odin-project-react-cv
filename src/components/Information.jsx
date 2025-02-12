@@ -12,7 +12,6 @@ function Information({ editable }) {
 
     return (
         <>
-            <h2>Information: </h2>
             <InputField
                 editable={editable}
                 onSubmit={handleChange("name")}
@@ -33,7 +32,7 @@ function Information({ editable }) {
                 label="Phone"
                 type="tel"
             />
-
+            <br></br>
         </>
     );
 };

@@ -10,7 +10,6 @@ function Experience({ editable }) {
     };
     return (
         <>
-            <h2>Experience:</h2>
             <InputField
                 editable={editable}
                 onSubmit={handleChange("company")}
@@ -43,6 +42,7 @@ function Experience({ editable }) {
                 label="End Date"
                 type="date"
             />
+            <br></br>
         </>
     );
 };

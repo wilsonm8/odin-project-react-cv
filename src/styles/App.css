@@ -53,4 +53,8 @@
   padding-right: 2px;
 }
 
+input{
+  border-radius: 12px;
+  padding: 2%;
+}
 
