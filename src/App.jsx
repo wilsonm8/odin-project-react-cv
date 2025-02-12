@@ -6,14 +6,50 @@ import Information from './components/Information.jsx'
 import Education from './components/Education.jsx'
 import Experience from './components/Experience.jsx'
 
-function App() {
 
+function Edit({ onEdit }) {
   return (
     <>
-      <form>
-        <Information />
-        <Education />
-        <Experience />
+      <button
+      type = "button"
+        onClick={onEdit}>
+        Edit
+      </button>
+    </>
+  )
+};
+
+function Submit({onSubmit}) {
+  return (
+    <>
+      <button
+        type="submit"
+        onClick={onSubmit}>
+        Submit
+      </button>
+    </>
+  )
+};
+
+function App() {
+  const [editable, setEditable] = useState(true);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setEditable(false);
+  };
+
+  const handleEdit = () => {
+    setEditable(true);
+  };
+  return (
+    <>
+      <form onSubmit={handleSubmit}>
+        <Information editable={editable} />
+        <Education editable={editable} />
+        <Experience editable={editable} />
+        <Edit onEdit={handleEdit} />
+        <Submit onSubmit={handleSubmit}/>
       </form>
     </>
   );
