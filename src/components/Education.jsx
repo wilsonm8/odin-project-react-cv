@@ -9,7 +9,7 @@ function Education({editable}) {
     };
     return (
         <>
-            <h2>Experience:</h2>
+            <h2>Education:</h2>
             <InputField
                 editable={editable}
                 onSubmit={handleChange("school")}
