@@ -9,17 +9,18 @@ function InputField({ editable, onSubmit, value, label, type = "text" }) {
 
     if (!editable) {
         return (
-            <div>
-                <label>{label}: {value}</label>
+            <div className="formGroup">
+                <label className="formLabel">{label}: </label>
+                <span>{value}</span>
             </div>
         );
 
     };
     return (
-        <div>
-            <label>{label}: </label>
+        <div className="formGroup">
+            <label className="formLabel">{label}: </label>
             <input
-                type = {type}
+                type={type}
                 onChange={handleChange}
                 value={inputValue}>
             </input>
@@ -33,18 +34,18 @@ function Information({ editable }) {
     const handleChange = (field) => (value) => {
         setInformation((prevInformation) => ({ ...prevInformation, [field]: value }));
     };
-   
+
 
     return (
         <>
-        <h2>Information: </h2>
+            <h2>Information: </h2>
             <InputField
                 editable={editable}
                 onSubmit={handleChange("name")}
                 value={information.name}
                 label="Name"
             />
-             <InputField
+            <InputField
                 editable={editable}
                 onSubmit={handleChange("email")}
                 value={information.email}
@@ -56,9 +57,9 @@ function Information({ editable }) {
                 onSubmit={handleChange("phone")}
                 value={information.phone}
                 label="Phone"
-                type="tel" 
+                type="tel"
             />
-           
+
         </>
     );
 };

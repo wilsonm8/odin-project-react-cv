@@ -40,3 +40,17 @@
 .read-the-docs {
   color: #888;
 }
+
+.formGroup{
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+  text-align: right;
+}
+
+.formLabel {
+  width:4rem;
+  padding-right: 2px;
+}
+
+
