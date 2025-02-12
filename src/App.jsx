@@ -44,6 +44,7 @@ function App() {
   };
   return (
     <>
+    <h1>CV Application</h1>
       <form onSubmit={handleSubmit}>
         <Information editable={editable} />
         <Education editable={editable} />
